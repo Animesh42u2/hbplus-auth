@@ -19,10 +19,10 @@
       },
       "predictiveBackGestureEnabled": false
     },
-    "web": {
-      "output": "server",
-      "favicon": "./assets/images/favicon.png"
-    },
+       "web": {
+     "bundler": "metro",
+     "output": "single"
+   },
     "plugins": [
       "expo-router",
       [
