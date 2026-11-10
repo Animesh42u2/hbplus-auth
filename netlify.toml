@@ -1,8 +1,12 @@
-   [build]
-     command = "npx expo export --platform web"
-     publish = "dist"
+[build]
+  command = "npx expo export --platform web"
+  publish = "dist"
 
-   [[redirects]]
-     from = "/*"
-     to = "/index.html"
-     status = 200
+[build.environment]
+  NODE_VERSION = "20"
+  SECRETS_SCAN_OMIT_KEYS = "EXPO_PUBLIC_FIREBASE_API_KEY,EXPO_PUBLIC_FIREBASE_APP_ID,EXPO_PUBLIC_FIREBASE_AUTH_DOMAIN,EXPO_PUBLIC_FIREBASE_PROJECT_ID,EXPO_PUBLIC_ALLOWED_DOMAIN,EXPO_PUBLIC_GOOGLE_WEB_CLIENT_ID,EXPO_PUBLIC_GOOGLE_ANDROID_CLIENT_ID,EXPO_PUBLIC_GOOGLE_IOS_CLIENT_ID"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
